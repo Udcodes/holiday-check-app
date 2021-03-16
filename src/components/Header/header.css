@@ -1,0 +1,23 @@
+.header{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  flex-direction: row;
+  align-items: center;
+}
+.header .header__list{
+  color: #506690;
+  margin: 0;
+  list-style: none;
+  padding: 0px;
+}
+.header .header__list__item{
+  padding: 5px 15px;
+}
+.header .right__column__container{
+  margin-left: 15px !important;
+}
+.header .right__column__text{
+color: #506690;
+}

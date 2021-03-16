@@ -1,0 +1,11 @@
+.imageOne{
+  /* background: url(photo-1533105079780-92b9be482077.jpg); */
+/* Shadow / Large */
+filter: drop-shadow(0px 24px 64px rgba(22, 27, 45, 0.1));
+border-radius: 5px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.section__button{
+  margin: 0px !important;
+}

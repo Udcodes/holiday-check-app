@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import FirstSection from './components/FirstSection/firstSection';
+import Header from './components/Header/header';
+import SecondSection from './components/SecondSection/secondSection';
 
-function App() {
+// output = { protocol: 'http', 'domain': 'holidaycheck.com' }
+//input = 'https://holidaycheck.com/passions'
+
+// output = { protocol: 'https', 'domain': 'holidaycheck.com', path: 'passions'}
+const App = () => {
+  const printOutput = (str) => {
+    const splittedStr = str.split('://');
+    const protocol = splittedStr[0];
+
+    const splittedDomain = splittedStr[1].split('/');
+    const domain = splittedDomain[0];
+    const path = splittedDomain[1];
+    console.log(splittedStr);
+
+    if (path === '') {
+      return { protocol, domain };
+    }
+
+    return { protocol, domain, path };
+  };
+  const input = 'https://holidaycheck.com/passions';
+
+  console.log(printOutput(input));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <FirstSection />
+      <SecondSection />{' '}
     </div>
   );
-}
+};
 
 export default App;
